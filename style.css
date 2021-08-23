@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    transition: all ease 0.4;
+    z-index: 2;
+}
+.sticky{
+    background-color: #4070f4;
+    padding: 15px 20px;
+}
+nav .nav-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    
+}
+.nav-content .logo a{
+    font-size: 35px;
+    color: #4070fa;
+    font-weight: 500;
+}
+.sticky .nav-content .logo a{
+    color: white;
+}
+
+.nav-content .nav-menu{
+    display: flex;
+    align-items: center;
+}
+.nav-content .nav-menu li{
+    margin: 0 8px;
+}
+.nav-menu li a{
+    font-size: 18px;
+    font-weight: 500;
+    color: #0e2431;
+    padding: 10px 4px;
+    transition: all ease 0.2s;
+}
+.nav-menu li a:hover{
+    color: #4070f4;
+}
+.sticky .nav-menu li a:hover{
+    color: #ffffff;
+}
+
+.nav-content .media-icons a{
+    font-size: 23px;
+    margin: 0 6px;
+    color: #4070f4;
+}
+.sticky .nav-content .media-icons a{
+    font-size: 22px;
+    margin: 0 6px;
+    color: white;
+}
+
+nav .menu-btn, .nav-content .cancel-btn{
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    right: 30px;
+    top: 20px;
+    display: none;
+}
+nav .menu-btn{
+    color: #4070f4;
+    
+}
+
+/*======Home section======*/
+
+.home{
+   background-color: #e5ebfc; 
+   height: 100vh;
+   width: 100%;
+}
+
+.home .home-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 90%;
+    margin: auto;
+}
+
+.home .text .text-one{
+    font-size: 25px;
+}
+.home .text .text-two{
+    font-size: 60px;
+    font-weight: 500;
+    margin-left: -3px;
+}
+
+.home .text .text-three{
+    font-size:35px;
+}
+
+.home .text .text-four{
+    font-size: 22px;
+    margin: 5px 0;
+}
+
+.home .button{
+    margin: 14px 0;
+}
+
+.home .button button{
+    outline: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 5px 10px;
+    background-color: #4070f4;
+    border: 2px solid transparent;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+.home .button button:hover{
+    color: #4070f4;
+    background-color: white;
+    border-color: #4070f4;
+}
+
+/*Section about me*/
+
+.about .about-details .right img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.about .about-details{
+    display: flex;
+    justify-content: space-between;
+}
+.about .content{
+    background-color: wheat;
+    width: 80%;
+    margin: 40px auto;
+}
+.about .title{
+    display: flex;
+    justify-content: center;
+}
+.about .title span{
+    font-size: 30px;
+    font-weight: 600;
+    padding: 3px;
+    position: relative;
+}
+.about .title span::before, .about .title span::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #4070f4;
+}
+.about .title span::after{
+    width: 70%;
+    left: 15%;
+    bottom: -7px;
+}
+
+@media (max-width: 750px){
+    
+    .nav-content .nav-menu{
+        position: absolute;
+        left: 100%;
+        top: 0;
+        height: 100vh;
+        max-width: 400px;
+        width: 100%;
+        background-color: #0e2431;
+        flex-direction: column;
+        align-items: center;
+        padding: 60px;
+        z-index: 1;
+        color: white;
+    }
+
+    nav .nav-content.active .nav-menu{
+        left: 0; 
+    }
+
+    .nav-content .nav-menu li a{
+        display: block;
+        font-size: 23px;
+        margin: 10px 0;
+        color: white;
+    }
+
+    .nav-content .media-icons a{
+        display: none;
+    }
+
+    nav .menu-btn, .nav-content .cancel-btn{
+        display: block;
+    }
+
+    .home .text .text-two{
+        font-size: 50px;
+        font-weight: 500;
+        margin-left: -3px;
+    }
+    
+    .home .text .text-three{
+        font-size:30px;
+    }
+}
+
+@media (max-width: 450px){
+    .home .text .text-one{
+        font-size:22px;
+    }
+
+    .home .text .text-two{
+        font-size: 40px;
+        font-weight: 500;
+        margin-left: -3px;
+    }
+    
+    .home .text .text-three{
+        font-size:25px;
+    }
+
+    .home .text .text-four{
+        font-size:17px;
+    }
+
+    .home .button button{
+        font-size: 15px;
+        font-weight: 500;
+        padding: 4px 7px;
+        border-radius: 5px;
+    }
+}
+
+
